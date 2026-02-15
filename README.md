@@ -2,6 +2,12 @@
 
 A simple, responsive web page that displays user approval status when users click on email verification/approval links.
 
+## 🌐 Live Demo
+
+This page is hosted directly on GitHub Pages. No external hosting required!
+
+**Base URL**: `https://fahimsadi.github.io/status/`
+
 ## Features
 
 - **Responsive Design**: Works seamlessly on both mobile phones and desktop computers
@@ -11,42 +17,56 @@ A simple, responsive web page that displays user approval status when users clic
   - ✕ **Error**: Red theme indicating an error occurred
 - **Clean UI**: Modern, animated interface with smooth transitions
 - **Mobile-Friendly**: Optimized for all screen sizes
+- **GitHub Pages Hosted**: Automatically deployed, no external hosting needed
 
 ## Usage
 
 The page uses URL parameters to determine which status to display. Simply add a `status` parameter to the URL:
 
-### Examples
+### Live Examples
 
 1. **Approved/Success Status**:
    ```
-   https://yourdomain.com/index.html?status=approved
+   https://fahimsadi.github.io/status/?status=approved
    or
-   https://yourdomain.com/index.html?status=success
+   https://fahimsadi.github.io/status/?status=success
    ```
+   [→ Try it now](https://fahimsadi.github.io/status/?status=approved)
 
 2. **Link Expired**:
    ```
-   https://yourdomain.com/index.html?status=expired
+   https://fahimsadi.github.io/status/?status=expired
    ```
+   [→ Try it now](https://fahimsadi.github.io/status/?status=expired)
 
 3. **Error Status**:
    ```
-   https://yourdomain.com/index.html?status=error
+   https://fahimsadi.github.io/status/?status=error
    ```
+   [→ Try it now](https://fahimsadi.github.io/status/?status=error)
 
 ## Email Integration
 
 When sending approval emails, include links like:
 ```
-https://yourdomain.com/index.html?status=approved
+https://fahimsadi.github.io/status/?status=approved
 ```
 
 The page will automatically display the appropriate status message and styling based on the URL parameter.
 
 ## Deployment
 
-Simply upload the `index.html` file to your web server or hosting platform. No additional dependencies or build steps required.
+This repository is automatically deployed to GitHub Pages via GitHub Actions. Any changes pushed to the `main` branch will be automatically deployed.
+
+### Setup Instructions
+
+1. The repository includes a GitHub Actions workflow (`.github/workflows/pages.yml`) that automatically deploys to GitHub Pages
+2. Enable GitHub Pages in repository settings:
+   - Go to Settings → Pages
+   - Under "Source", select "GitHub Actions"
+3. Push changes to the `main` branch to trigger automatic deployment
+
+No build steps or external hosting required!
 
 ## Browser Support
 
