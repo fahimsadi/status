@@ -131,13 +131,13 @@
 
     <script>
         // Function to get URL parameter
-        function getUrlParameter(name) {
+        function getUrlParameter(paramName) {
             const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
+            return urlParams.get(paramName);
         }
 
-        // Function to display timestamp
-        function displayTimestamp() {
+        // Function to format timestamp
+        function formatTimestamp() {
             const now = new Date();
             const options = { 
                 year: 'numeric', 
@@ -159,7 +159,7 @@
             const timestamp = document.getElementById('timestamp');
 
             // Set timestamp
-            timestamp.textContent = displayTimestamp();
+            timestamp.textContent = formatTimestamp();
 
             switch (status) {
                 case 'approved':
