@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Approval Status</title>
+    <title>Admin Confirmation</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +18,7 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5f5f5;
         }
 
         .status-container {
@@ -28,19 +28,7 @@
             max-width: 500px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.5s ease-out;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .icon {
@@ -167,8 +155,8 @@
                     icon.innerHTML = '✓';
                     icon.className = 'icon success';
                     title.className = 'success';
-                    title.textContent = 'Account Approved!';
-                    message.textContent = 'Congratulations! Your account has been successfully approved by the administrator. You can now access all features.';
+                    title.textContent = 'User Approved';
+                    message.textContent = 'The user has been approved. Thank you.';
                     break;
 
                 case 'expired':
@@ -176,15 +164,15 @@
                     icon.className = 'icon expired';
                     title.className = 'expired';
                     title.textContent = 'Link Expired';
-                    message.textContent = 'This approval link has expired. Please contact the administrator to request a new approval link.';
+                    message.textContent = 'The approval link has expired. Thank you.';
                     break;
 
                 case 'error':
                     icon.innerHTML = '✕';
                     icon.className = 'icon error';
                     title.className = 'error';
-                    title.textContent = 'Error';
-                    message.textContent = 'An error occurred while processing your approval. Please contact the administrator for assistance.';
+                    title.textContent = 'Error Occurred';
+                    message.textContent = 'An error occurred during the approval process. Thank you.';
                     break;
 
                 default:
@@ -192,7 +180,7 @@
                     icon.className = 'icon error';
                     title.className = 'error';
                     title.textContent = 'Invalid Status';
-                    message.textContent = 'The status parameter is missing or invalid. Please check the link and try again.';
+                    message.textContent = 'Invalid status parameter. Please check the link.';
             }
         }
 
